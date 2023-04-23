@@ -1,0 +1,159 @@
+1. 
+
+
+
+Your task is to supplement the source code below with the missing functions. The program prints the following text in accordance with the user's selections:
+
+
+Choice 1: "The cat says meow!"
+Choice 2: "The dog says wuff-wuff!"
+Choice 3: "The cow says moo!"
+
+
+Upon execution, the program asks the user to select one of the animals. Once selected, the program calls a function that prints out the correct utterance. After executing the function, the program returns to ask the user for a new choice. The program is terminated by a negative integer.
+
+Code to be supplemented:
+
+
+#include <stdio.h>
+
+void cat(void);
+void dog(void);
+void cow(void);
+
+void main()
+{
+  int choice;
+  do{
+
+    printf("1:cat\n2:dog\n3:cow\n");
+    printf("End with a negative number.\n");
+    printf("Select animal:");
+    scanf("%d", &choice);
+    if(choice < 0) {
+      printf("Terminating the program...");
+    }
+    else if(choice == 1) {
+      cat();
+    }
+    else if(choice == 2) {
+      dog();
+    }
+    else if(choice == 3) {
+      cow();
+    }
+    else {
+      printf("You entered an invalid number.\n\n");
+    }
+  }while(choice>0);
+}
+
+Hint: The purpose of the exercise is to provide you with a feeling for writing functions. Do not copy the source code, only write functions that print the output. The functions are declared in the prototypes before the main program.
+
+Example output:
+1:cat
+2:dog
+3:cow
+End with a negative number.
+Select animal:1
+The cat says meow!
+
+1:cat
+2:dog
+3:cow
+End with a negative number.
+Select animal:2
+The dog says wuff-wuff!
+
+1:cat
+2:dog
+3:cow
+End with a negative number.
+Select animal:3
+The cow says moo!
+
+1:cat
+2:dog
+3:cow
+End with a negative number.
+Select animal:-1
+Terminating the program...
+
+The verification of program output does not account for whitespace characters like "\n", "\t" and " "
+
+
+
+
+
+
+2.
+
+
+
+Write a calculator program that calculates the sum, difference or product of two integers. The program asks for the type of calculation first (1 = sum, 2 = difference, 3 = product). After calculation, the result is printed on the screen and the program returns to prompt for the next calculation.
+
+You should write a function for each calculation, prompting for the numbers, performing the desired calculation and printing the answer on the screen. The program is terminated by entering a negative number just like in the previous exercise.
+
+Hint:
+You can use the previous exercise as the body of your program. The functions carrying out the calculations and printing do not take any parameters or return any value.
+
+Example output:
+1: sum of two numbers
+2: difference of two numbers
+3: product of two numbers
+<0: terminate the program
+Select calculation:1
+Enter the first number:55
+Enter the second number:33
+55 + 33 = 88
+
+1: sum of two numbers
+2: difference of two numbers
+3: product of two numbers
+<0: terminate the program
+Select calculation:2
+Enter the first number:14
+Enter the second number:41
+14 - 41 = -27
+
+1: sum of two numbers
+2: difference of two numbers
+3: product of two numbers
+<0: terminate the program
+Select calculation:3
+Enter the first number:4
+Enter the second number:5
+4 * 5 = 20
+
+1: sum of two numbers
+2: difference of two numbers
+3: product of two numbers
+<0: terminate the program
+Select calculation:-1
+Terminating the program...
+
+The verification of program output does not account for whitespace characters like "\n", "\t" and " "
+
+
+
+
+
+3.
+
+Write a program that takes three integers as input and prints the smallest and largest of these numbers. The main program must prompt for integers and read them. Write the functions largest() and smallest() that receive the entered numbers as their parameters. Correspondingly, the functions shall return values corresponding to their names.
+
+Hint:
+You can use combined comparisons and the if-else structure in your program.
+
+Example output:
+Enter the 1. number:12355
+Enter the 2. number:32145
+Enter the 3. number:22112
+Among the numbers you entered,
+the largest was 32145 and the smallest was 12355.
+
+The verification of program output does not account for whitespace characters like "\n", "\t" and " "
+
+
+
+

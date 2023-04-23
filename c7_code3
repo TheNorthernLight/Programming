@@ -1,0 +1,57 @@
+#include <stdio.h>
+int smallest(int x, int x2, int x3);
+int largest(int x, int x2, int x3);
+
+int main()
+{ 
+ int x, x2, x3;
+
+ printf("Enter the 1. number:");
+ scanf("%d", &x);
+
+ printf("Enter the 2. number:");
+ scanf("%d", &x2);
+
+ printf("Enter the 3. number:");
+ scanf("%d", &x3);
+ 
+ int result_sm = smallest(x, x2, x3);
+ int result_big = largest(x, x2, x3);
+ 
+ printf("Among the numbers you entered,\nthe largest was %d and the smallest was %d.", result_big, result_sm); 
+ return 0;
+}
+
+
+int smallest(int x, int x2, int x3)
+{
+	int result;
+	
+	if((x <= x2) && (x <= x3)){
+		result = x;
+	}
+	else if((x2 <= x) && (x2 <= x3)){
+		result = x2;
+	}
+	else {
+		result = x3;
+	}
+	return result;
+}	 
+
+
+int largest(int x, int x2, int x3)
+{
+	int total;
+	
+	if((x >= x2) && (x >= x3)){
+		total = x;
+	}
+	else if((x2 >= x) && (x2 >= x3)){
+		total = x2;
+	}
+	else {
+		total = x3;
+	}
+	return total;
+}	

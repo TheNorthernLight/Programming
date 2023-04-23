@@ -1,0 +1,56 @@
+#include <stdio.h>
+int main()
+{
+    int mata[10][10], matb[10][10], sum[10][10];
+    int x, y;
+	
+	FILE *fp1 = fopen("mata.txt", "r");
+    if (fp1 == NULL) {
+        printf("Failed to open file mata.txt\n");
+        return 1;
+    }
+    for (x = 0; x < 10; x++) {
+        for (y = 0; y < 10; y++) {
+            fscanf(fp1, "%d", &mata[x][y]);
+        }
+    }
+    fclose(fp1);
+
+    
+    FILE *fp2 = fopen("matb.txt", "r");
+    if (fp2 == NULL) {
+        printf("Failed to open file matb.txt\n");
+        return 1;
+    }
+    for (x = 0; x < 10; x++) {
+        for (y = 0; y < 10; y++) {
+            fscanf(fp2, "%d", &matb[x][y]);
+        }
+    }
+    fclose(fp2);
+
+    
+    for (x = 0; x < 10; x++) {
+        for (y = 0; y < 10; y++) {
+            sum[x][y] = mata[x][y] + matb[x][y];
+        }
+    }
+
+    
+    FILE *fp3 = fopen("sum.usr", "w");
+    if (fp3 == NULL) {
+        printf("Failed to create file sum.usr\n");
+        return 1;
+    }
+    for (x = 0; x < 10; x++) {
+        for (y = 0; y < 10; y++) {
+            fprintf(fp3, "%d\n", sum[x][y]);
+        }
+        fprintf(fp3, "\n");
+    }
+    fclose(fp3);
+
+    printf("The sum of the matrices has been calculated into the file sum.usr.\n");
+
+    return 0;
+}

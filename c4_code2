@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{  
+int number, result;
+	
+printf("Enter an integer:");
+scanf("%d", &number);
+
+result = number % 2;
+	
+printf("The number is %d", result);
+	
+	
+return 0;
+}

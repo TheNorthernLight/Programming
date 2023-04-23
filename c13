@@ -1,0 +1,56 @@
+1. 
+
+Your task is to write a subroutine that takes a pointer to the first element of an integer array, as well as an integer variable. The arguments are passed to the subroutine in this order. The integer variable passed as an argument holds the number of elements in an array, while the actual array holds the number of integers specified by the variable.
+
+The subroutine must go through the table and return the address of the element holding the smallest value to the calling program. After receiving the address, the main program uses it to print the smallest number contained in the array.
+
+The prototype of the subroutine is the following:
+
+int *address_of_smallest_value(int *numbers, int size);
+
+In the above, the * operator indicates that the function's return value is a pointer.
+
+Example output:
+The smallest number in the array is: 3
+
+The verification of program output does not account for whitespace characters like "\n", "\t" and " "
+
+
+
+
+2.
+
+
+
+The C program below receives integers as command line arguments. After receiving the required values, the program calls the subroutine "calculate_and_print" which receives an array and its size passed by the main program, prints the numbers on the screen and prints their sum on the screen.
+
+
+#include <stdio.h> 
+#include <stdlib.h>
+
+void calculate_and_print(int *, int);
+
+int main(int argc, char *argv[])
+{
+  int x, sum=0, size=5, array[5];
+  if(argc == 6){ 
+  /* Program name and command line parameters */
+    for(x=0;x<argc-1;x++){
+     array[x] = atoi(argv[x+1]);
+    }
+    calculate_and_print(array, size);
+  }else{
+    printf("Incorrect number of command line arguments\n");
+  }
+  return 0;
+}
+
+Your task is to write the subroutine "calculate_and_print". The example printout shows how to print the numbers. The main program includes things that are outside the scope of this course, but you only need to write a subroutine that serves the main program.
+
+Example output:
+Elements of the array: 43 53 654 65 77
+Sum = 892
+
+The verification of program output does not account for whitespace characters like "\n", "\t" and " "
+
+

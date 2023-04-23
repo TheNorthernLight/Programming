@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+char test[10]; 
+int cup_number;
+	
+printf("Do you drink coffee or tea (c/t)?");
+test[0] = getchar();
+
+if ((test[0] == 'c') || (test[0] == 'C'))
+	strcpy(test, "coffee");
+else
+	strcpy(test, "tea");
+
+	
+printf("How many cups do you drink daily:");
+scanf("%d", &cup_number);
+	
+if ((cup_number <= 2) && ((test[0] == 'c') || (test[0] == 'C') || (test[0] == 't') || (test[0] == 'T')))
+	printf("You don't drink a lot of %s, do you?", test);
+
+else if ((cup_number >= 3) && (cup_number <= 20) && ((test[0] == 'c') || (test[0] == 'C') || (test[0] == 't') || (test[0] == 'T'))) 
+	printf("You drink a lot of %s!", test);
+
+else
+	printf("An error occurred in the program!");
+
+	
+return 0;
+}

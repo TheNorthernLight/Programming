@@ -1,0 +1,48 @@
+1.
+
+Write a program that prompts the user for an integer n (n>0) and prints the numbers 1,2,3...n on the screen one below the other. Write the program using the FOR statement.
+
+Example output:
+Enter an integer: 3
+1
+2
+3
+
+The output of the program must be exactly the same as the example output (the most strict comparison level)
+
+
+2.
+
+Write a program that prompts the user for an integer n (n>0) and prints the factorial of the number on the screen. For example, the factorial of n is designated n!, which means the number calculated as follows: 1*2*3...*n
+
+Example output:
+Enter an integer: 3
+The factorial of 3 is 6
+
+The verification of program output does not account for whitespace characters like "\n", "\t" and " "
+
+
+3.
+
+
+Write a program that asks for the students' exam scores (using integers 4 to 10) and calculates the average. The program must accept scores until entry is terminated by a negative integer. Finally, the program prints out the number of scores and the calculated average with two decimal places of precision.
+
+Hint:
+You can write your program using either the while or do...while statement.
+
+Example output:
+The program calculates the average of scores you enter.
+End with a negative integer.
+Enter score (4-10):7
+Enter score (4-10):8
+Enter score (4-10):9
+Enter score (4-10):10
+Enter score (4-10):4
+Enter score (4-10):4
+Enter score (4-10):5
+Enter score (4-10):-1
+You entered 7 scores.
+Average score: 6.71
+
+The output of the program must be exactly the same as the example output (the most strict comparison level)
+

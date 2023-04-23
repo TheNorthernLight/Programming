@@ -1,0 +1,20 @@
+#include <stdio.h> 
+int main()
+{
+	char word_name[15], letter_check;
+	int i, count=0;
+	
+	printf("The program calculates the number of vowels.\n");
+	
+	printf("Enter a word:");
+	scanf("%s", word_name);
+	
+	for(i=0; i < 15; i++){
+		letter_check = word_name[i];
+		if((letter_check == 'a') || (letter_check == 'e') || (letter_check == 'i') || (letter_check == 'o') || (letter_check == 'u') || (letter_check == 'y')){
+			count++;}
+	}
+	printf("The word contains %d vowels.", count);
+	
+ return 0;
+}

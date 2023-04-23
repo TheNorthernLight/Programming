@@ -1,0 +1,27 @@
+#include <stdio.h> 
+
+int main()
+{
+    FILE *opening; 
+    char *file_name = "numbers.s";
+    char *opening_mode = "r"; 
+    int n1, n2, n3, n4, sum;
+	
+    opening = fopen(file_name, opening_mode); 
+
+    if (opening == NULL) { 
+        printf("An error occurred when opening the file!"); 
+        return 1; 
+    }  
+    else {
+        printf("Numbers found in the file numbers.s:\n");
+        fscanf(opening, "%d %d %d %d", &n1, &n2, &n3, &n4);
+        printf("%d, %d, %d and %d\n\n", n1, n2, n3, n4);
+        sum = n1 + n2 + n3 + n4;
+		
+        fclose(opening);
+        printf("Sum of the numbers: %d\n", sum);
+    } 
+
+    return 0;
+}

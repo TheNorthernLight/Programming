@@ -1,0 +1,41 @@
+1. 
+
+#include <stdio.h>
+int main()
+{  
+int integer;
+float number;
+
+printf("Enter an integer: ");
+scanf("%d", &integer);
+
+printf("Enter a decimal number:");
+scanf("%f", &number);	
+	
+	
+printf("\nYou entered the integer: %d", integer);
+printf("\nYou entered the decimal number, rounded to two decimal places: %.2f", number);
+
+	
+	
+return 0;
+}
+
+2.
+
+
+#include <stdio.h>
+int main()
+{  
+float number, marka = 5.94573, sum = 0;
+
+printf("Enter an amount in FIM:");
+scanf("%f", &number);
+
+sum = number / marka;
+	
+printf("FIM converted to euro: %.2f", sum);
+
+	
+return 0;
+}

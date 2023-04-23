@@ -1,0 +1,29 @@
+1. 
+
+#include <stdio.h>
+int main()
+{  
+printf("Hello everybody!\n");
+
+return 0;
+}
+
+
+
+2. 
+
+
+#include <stdio.h>
+int main()
+{
+int number, square;
+
+printf("Enter an integer: ");
+scanf("%d", &number);
+
+square = number * number;
+	
+printf("The square of the number you entered is %d", square);
+
+return 0;
+}

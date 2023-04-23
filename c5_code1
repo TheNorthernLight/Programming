@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+int number, number2;
+
+printf("Enter an integer: ");
+scanf("%d", &number);
+
+number2 = number % 2;
+	
+if (number2 == 0) 
+printf("Number %d is even.", number);
+
+else
+printf("Number %d is odd.", number);
+   
+return 0;
+}

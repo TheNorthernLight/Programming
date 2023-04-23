@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+	
+	struct personaldata {
+    char first_name[20];
+    char last_name[20];
+    char phone_num[20];
+	};
+	
+    int i, num;
+    struct personaldata person[50];
+    
+
+    FILE *fp1 = fopen("phonedir.txt", "r");
+    
+    if(fp1 == NULL){
+        printf("Error opening file!");
+        return 1;
+    } 
+	else {
+		fscanf(fp1, "%d", &num);
+		for(i=0; i < num; i++){
+			fscanf(fp1, "%s %s %s", person[i].first_name, person[i].last_name, person[i].phone_num);
+		}
+	fclose(fp1);
+	}
+	
+	for(i=0; i < num; i++){
+    	printf("%s %s %s\n", person[i].first_name, person[i].last_name, person[i].phone_num);
+	}
+  return 0;
+}

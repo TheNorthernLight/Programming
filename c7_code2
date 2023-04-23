@@ -1,0 +1,72 @@
+#include <stdio.h>
+int sum(int x, int y);
+int dif(int x, int y);
+int pro(int x, int y);
+
+int main()
+{ 
+ int x, y, input=1;
+ do{
+     printf("1: sum of two numbers\n2: difference of two numbers\n3: product of two numbers\n<0: terminate the program\n");
+     printf("Select calculation:");
+     scanf("%d", &input);
+    
+    if(input < 0) {
+      printf("Terminating the program...");
+      return 0;
+	}
+    
+    printf("Enter the first number:");
+    scanf("%d", &x);
+    	
+    printf("Enter the second number:");
+    scanf("%d", &y);
+    
+    if(input == 1) {
+      sum(x, y);
+    }
+    else if(input == 2) {
+      dif(x, y);
+    }
+    else if(input == 3) {
+      pro(x, y);
+    }
+    
+  }while(input>=0);
+  
+    
+  
+  return 0;
+}
+
+
+int sum(int x, int y)
+{
+	int sum;
+	
+	sum = x + y;
+	printf("%d + %d = %d\n\n", x, y, sum);
+	return 0;
+}	 
+
+
+int dif(int x, int y)
+{
+	int sum;
+	
+	sum = x - y;
+	printf("%d - %d = %d\n\n", x, y, sum);
+	return 0;
+}	
+
+
+int pro(int x, int y)
+{
+	int sum;
+	
+	sum = x * y;
+	printf("%d * %d = %d\n\n", x, y, sum);
+	return 0;
+}	
+
+
