@@ -1,2 +1,2 @@
-# Programming
-C , C++ and Python is already here
+# Programming in C++
+Here presented the exercises and codes
