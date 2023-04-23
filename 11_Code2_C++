@@ -1,0 +1,25 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() 
+{
+    fstream file;
+    file.open("students.txt", ios_base::in);
+
+    if (!file.is_open()) {
+        cout << "Failed to open the file!" << endl;
+        exit(-1);
+    }
+
+    char class_name;
+	string name, surname;
+
+     while(file >> class_name >> name >> surname) {
+        
+        cout << name << " " << surname << ": class " << class_name << endl;
+    }
+    file.close();
+
+}

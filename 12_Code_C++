@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int run, i=0, product_price[10], product[10], sum=0, payment, change;
+    int prodprices[] = { 10, 14, 22, 33, 44, 13, 22, 55, 66, 77 };
+    
+    cout << "Supermarket\n" << "===========" << endl;
+    
+    do {
+        cout << "Please select product (1-10) 0 to Quit:";
+        cin >> run;
+        
+        if(run > 10) {
+            cout << "Please select correct product (1-10)\n";
+        } else if (run > 0) {
+            product[i] = run;
+            product_price[i] = prodprices[run-1];
+            sum += product_price[i];
+            cout << "Product: " << product[i] << " Price: " << product_price[i] << endl;
+            i++;
+        }
+            
+    } while(run > 0);
+    
+    cout << "Total: " << sum << endl;
+    cout << "Payment: ";
+    cin >> payment;
+    change = payment - sum;
+    cout << "Change: " << change << endl;
+    
+    return 0;
+}

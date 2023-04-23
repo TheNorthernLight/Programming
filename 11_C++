@@ -1,0 +1,66 @@
+1.
+
+
+Write a program that reads integers from a file and prints their sum on screen. Follow the format of the example print.
+
+Every number is in it's individual row in the file. The sum of numbers is written as the last number in the file. The name of the file is numbers.txt. If the program fails to open the file, it prints “Failed to open file!” on screen. After this the program execution ends.
+
+For example, if the contents of numbers.txt is at first:
+
+1
+
+2
+
+, after executing the program it is:
+
+1
+
+2
+
+3
+
+The numbers that are already in the file when the program is executed, are summed together and the sum is added to the end of the file.
+
+Example output:
+Sum is 25
+
+The verification of program output does not account for whitespace and is not case-sensitive (the least strict comparison level)
+
+
+
+
+
+
+
+
+
+
+2.
+
+
+
+
+Write a program that reads characters and strings from the file students.txt and prints them on screen. Follow the format of the example print.
+
+Every student's information is in it's individual row in the file. If the program fails to open the file, it prints “Failed to open file!” on screen. After this the program execution ends.
+
+For example, if the contents of students.txt is:
+
+Z Andy Arkinson
+
+Y Bob Bender
+
+, information is printed as follows:
+
+Andy Arkinson: class Z
+
+Bob Bender: class Y
+
+Example output:
+Samantha Austin: class D
+Bill Smith: class E
+
+The verification of program output does not account for whitespace and is not case-sensitive (the least strict comparison level)
+
+
+

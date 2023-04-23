@@ -1,0 +1,68 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+class Employee {
+public:
+    int id;
+    string name;
+
+    Employee(int id, string name) {
+        this->id = id;
+        this->name = name;
+    }
+};
+
+class SalaryEmployee : public Employee {
+public:
+    float monthly_salary;
+
+    SalaryEmployee(int id, string name, float monthly_salary) : Employee(id, name) {
+        this->monthly_salary = monthly_salary;
+    }
+
+    float CalculateSalary() {
+        return monthly_salary;
+    }
+};
+
+class PayrollSystem {
+public:
+    void CalculatePayroll(vector<Employee*> employees) {
+        cout << "Employee Payroll" << endl;
+        cout << "================" << endl;
+        for (int i = 0; i < employees.size(); i++) {
+            SalaryEmployee* salary_employee = static_cast<SalaryEmployee*>(employees[i]);
+            float salary = salary_employee->CalculateSalary();
+            cout << "Payroll for: " << salary_employee->name << " - " << salary_employee->id << endl;
+            cout << "- Check amount: " << salary << endl;
+        }
+    }
+};
+
+int main() {
+    string name;
+    float salary;
+    int id = 1;
+    vector<Employee*> employees;
+
+    do {
+        cout << "Please enter employee name (0 to quit): ";
+        cin >> name;
+        if (name != "0") {
+            cout << "Please enter salary: ";
+            cin >> salary;
+            SalaryEmployee* salary_employee = new SalaryEmployee(id, name, salary);
+            employees.push_back(salary_employee);
+            id++;
+        }
+    } while (name != "0");
+
+    PayrollSystem payroll_system;
+    payroll_system.CalculatePayroll(employees);
+
+    return 0;
+}
+

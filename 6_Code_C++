@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n1, i;
+	
+	cout << "Input an integer:";
+	cin >> n1;
+	
+	for(i=1; i<=n1; i++){
+		cout << i << endl;
+	}
+}

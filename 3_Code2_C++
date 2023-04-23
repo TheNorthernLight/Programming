@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+#define PI 3.142
+
+int main()
+{
+  float r, area;
+
+  cout << "Input circle radius:";
+  cin >> r;
+	
+  area = r * r * PI;
+	
+  cout << "Circle area with the given radius: " << area << endl;
+}
+

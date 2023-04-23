@@ -1,0 +1,113 @@
+1.
+
+
+Write a program that asks user for an integer and checks if the number is even or odd. If the number is even, program prints “Number X is even.” and if it is odd, program prints “Number X is odd.”. X marks the inputted number.
+
+Tip:
+
+A number is even if it's remainder, when divided by 2, is 0.
+
+Example print
+
+Input an integer: 452
+
+Number 452 is even.
+
+Example output:
+Input an integer: 157
+The number 157 is odd.
+
+The output of the program must be exactly the same as the example output (the most strict comparison level)
+
+
+
+
+
+
+
+2.
+
+
+
+Write a program which asks the user whether they prefer coffee or tea, and how many sugar cubes they put in. The program's output depends on the user's answers:
+
+    Coffee, 0-2 cubes: "Coffee certainly is invigorating!"
+    Coffee, 3+ cubes: "Well, coffee can taste pretty intense..."
+    Tea, 0-2 cubes: "Tea can have a soothing effect!"
+    Tea, 3+ cubes: "Guess you enjoy your tea overly sweet?"
+    Otherwise: "An error occurred in the program!"
+
+The sugar cubes are handled as an integer variable and the drink as a character variable ('c'/'t'). Uppercase can be ignored.
+
+Tip:
+Spend enough time designing the program's flow before starting to write it.
+
+Example output:
+Do you drink coffee or tea? (k/t) t
+With how many cubes of sugar? 5
+Guess you enjoy your tea overly sweet?
+
+The output of the program must be exactly the same as the example output (the most strict comparison level)
+
+
+
+
+
+3.
+
+
+
+Enhance the previous calculator program so that the user can choose which operation he wants to perform. The program first asks for the performed calculation. After this the program asks for the integers, performs the calculation and prints the result. Make the choice structure with switch() statement.
+
+Tip:
+
+Calculations are printed ad follows:
+
+Subtraction: x-y=z
+
+Addition: x+y=z
+
+Multiplication: x*y=z
+
+Remainder: x%y=z
+
+Example print
+
+Choose from the following calculations:
+
+    subtraction
+
+    addition
+
+    Multiplication
+
+    Division
+
+    Remainder
+
+Choose a calculation: 2
+
+Input first number: 33
+
+Input second number: 12
+
+33+12=45
+
+Example output:
+Choose desired calculation:
+1: subtraction
+2: addition
+3: multiplication
+4: division
+5: Remainder
+Choose a calculation:3
+Input first number:15
+Input second number:4
+15*4 = 60
+
+The output of the program must be exactly the same as the example output (the most strict comparison level)
+
+
+
+
+

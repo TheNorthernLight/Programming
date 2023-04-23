@@ -1,0 +1,78 @@
+1.
+
+
+Write a program that calculates the amount of work hours in a given time frame and prints the total amount of hours, the average work day length and inputted hours separated by spaces. The program first asks how many days will be inputted (max. 30 days). After this the program proceeds to ask the daily work hours.
+
+Tip:
+
+Use an array with 30 elements to ease the making of the program.
+
+Example output:
+The program calculates the total amount of
+work hours during a given time frame and the average work day length.
+How many days:
+4
+Input hours of workday 1: 8
+Input hours of workday 2: 7.5
+Input hours of workday 3: 9
+Input hours of workday 4: 10
+Total work hours: 34.5
+Average work day length: 8.625
+Inputted hours: 8 7.5 9 10 
+
+The output of the program must be exactly the same as the example output (the most strict comparison level)
+
+
+
+
+
+2.
+
+
+The C++ program below reads from the file matrix.txt integers table inserting it in the 5x5 table (matrix [5][5]). The program prints the matrix on screen, calculates the sum of the elements and prints the sum on screen making use of functions print_matrix () and count_sum(). Your task is to make up the functions in question. The values situated on the rows are separated by space.
+
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+void print_matrix(int matrix[5][5]);
+int calculate_sum(int matrix[5][5]);
+
+int main(void)
+{
+  int matrix[5][5];
+  int sum;
+  ifstream file("matrix.txt");
+  if (!file){
+        cout << "File cannot be opened!";
+  }
+  else {
+    for (int y=0; y<5;y++){
+          for (int x=0;x<5;x++){
+            file >> matrix[y][x];
+          }
+    }
+    file.close();
+    cout << "Matrix:" << endl;
+    print_matrix(matrix);
+    sum = count_sum(matrix);
+    cout << "Sum of elements: " << sum << endl;
+  }
+} 
+
+Example output:
+Matrix:
+11 2 4 5 6 
+9 8 7 6 5 
+1 2 3 4 5 
+11 22 33 44 55 
+1 2 4 5 0 
+Sum of elements: 255
+
+The verification of program output does not account for whitespace and is not case-sensitive (the least strict comparison level)
+
+
+
+
+

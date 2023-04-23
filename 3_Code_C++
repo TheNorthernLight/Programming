@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  float number, euro_rate = 0.727802, sum = 0;
+
+  cout << "How much dollars do you want to exchange:";
+  cin >> number;
+	
+  sum = number * euro_rate;
+	
+  cout << "Amount in euros: " << sum << endl;
+}
+
+

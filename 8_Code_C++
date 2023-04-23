@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	printf("The program calculates the total amount of\nwork hours during a given time frame and the average work day length.\n");
+
+	int day_num, index;
+	float hours[31], sum=0, avr;
+	
+	cout << "How many days:\n";
+    cin >> day_num;
+	
+	for(index=0; index < day_num; index++){
+		
+		cout << "Input hours of workday " << index+1 << ": ";
+ 	    cin >> hours[index];
+	}
+	
+	for(index=0; index < day_num; index++){
+		
+		sum = sum + hours[index];
+	}
+	
+	avr = sum / day_num;
+	
+    cout << "Total work hours: " << sum << endl;
+	cout << "Average work day length: " << avr << endl;
+	
+	cout << "Inputted hours: ";
+	for(index=0; index < day_num; index++){
+		
+		cout << hours[index] << " ";
+	}
+	cout << endl;
+}

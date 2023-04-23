@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+class Employee {
+public:
+    int id;
+    string name;
+
+    void init(int id, string name) {
+        this->id = id;
+        this->name = name;
+    }
+};
+
+int main() {
+    vector<Employee> employees;
+    string name;
+    int id = 1;
+	
+    do {
+        cout << "Please enter employee name (0 to quit):" ;
+        getline(cin, name);
+        if (name != "0") {
+            Employee emp;
+            emp.init(id, name);
+            employees.push_back(emp);
+            id++;
+        }
+    } while (name != "0");
+
+    for (Employee emp : employees) {
+        cout << "Id: " << emp.id << " Name: " << emp.name << endl;
+    }
+
+    return 0;
+}
+

@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+    char word[10];
+    int sugar_cubs;
+	
+    cout << "Do you drink coffee or tea? (k/t) ";
+    word[0] = getchar();
+	
+    if ((word[0] == 'c') || (word[0] == 'C'))
+        strcpy(word, "coffee");
+    else
+        strcpy(word, "tea");
+	
+    cout << "With how many cubes of sugar? ";
+    cin >> sugar_cubs;
+	
+    if (((sugar_cubs <= 2) && (sugar_cubs >= 0)) && ((word[0] == 'c') || (word[0] == 'C'))) {
+		cout << "Coffee certainly is invigorating!" << endl;
+	}
+	else if (((sugar_cubs <= 2) && (sugar_cubs >= 0)) && ((word[0] == 't') || (word[0] == 'T'))) {
+		cout << "Tea can have a soothing effect!" << endl;
+	}
+    else if ((sugar_cubs >= 3) && ((word[0] == 'c') || (word[0] == 'C'))) {
+        cout << "Well, coffee can taste pretty intense..." << endl;
+	}
+	else if ((sugar_cubs >= 3) && ((word[0] == 't') || (word[0] == 'T'))) {
+        cout << "Guess you enjoy your tea overly sweet?" << endl;
+	}
+	else
+        cout << "An error occurred in the program!" << endl;
+}
