@@ -1,0 +1,30 @@
+def main():
+    i = 0
+    product_price = []
+    product = []
+    sum = 0
+    prodprices = [10, 14, 22, 33, 44, 13, 22, 55, 66, 77]
+
+    print("Supermarket\n===========")
+
+    run = 1
+    while run > 0:
+        run = int(input("Please select product (1-10) 0 to Quit:"))
+
+        if run > 10:
+            print("Please select correct product (1-10)\n")
+        elif run > 0:
+            product.append(run)
+            product_price.append(prodprices[run-1])
+            sum += product_price[i]
+            print("Product: ", product[i], " Price: ", product_price[i])
+            i += 1
+
+    print("Total: ", sum)
+    payment = int(input("Payment: "))
+    change = payment - sum
+    print("Change: ", change)
+
+if __name__ == "__main__":
+    main()
+

@@ -1,0 +1,25 @@
+class Employee:
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
+def main():
+    employees = []
+    id = 1
+	
+    while True:
+        name = input("Please enter employee name (0 to quit):")
+        
+        if name == "0":
+            break
+            
+        emp = Employee(id, name)
+        employees.append(emp)
+        id += 1
+
+    for emp in employees:
+        print("Id: ",emp.id," Name: ",emp.name)
+
+if __name__ == "__main__":
+    main()
+

@@ -1,0 +1,39 @@
+class Employee:
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
+class SalaryEmployee(Employee):
+    def __init__(self, id, name, monthly_salary):
+        super().__init__(id, name)
+        self.monthly_salary = monthly_salary
+
+    def CalculateSalary(self):
+        return self.monthly_salary
+
+class PayrollSystem:
+    def CalculatePayroll(self, employees):
+        for employee in employees:
+            print("Employee Payroll\n================")
+            salary_employee = employee
+            salary = salary_employee.CalculateSalary()
+            print(f"Payroll for: {salary_employee.id} - {salary_employee.name}")
+            print(f"- Check amount: {salary}\n")
+
+if __name__ == "__main__":
+	name = ""
+	salary = 0
+	id = 1
+	employees = []
+
+	while name != "0":
+		name = input("Please enter employee name (0 to quit):")
+		if name != "0":
+			salary = int(input("Please enter salary:"))
+			salary_employee = SalaryEmployee(id, name, salary)
+			employees.append(salary_employee)
+			id += 1
+	
+	payroll_system = PayrollSystem()
+	payroll_system.CalculatePayroll(employees)
+

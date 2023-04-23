@@ -1,0 +1,31 @@
+print("(1) Read the notebook \n(2) Add note \n(3) Empty the notebook \n(4) Quit")
+
+choice = int(input("Please select one: "))
+
+while choice != 4: 
+	if choice > 3 and choice < 0: 
+		print("Incorrect selection")
+		
+	elif choice == 1:
+		file_open = open("notebook.txt", "r")
+		print(file_open.read())
+		file_open.close()
+		
+	elif choice == 2:
+		file_open = open("notebook.txt", "a")
+		write_text = input("Write a new note: ")
+		file_open.write(write_text)
+		file_open.close()
+	
+	else:
+		file_open = open("notebook.txt", "w")
+		write_text = " "
+		file_open.write(write_text)
+		file_open.close()
+		print("Notes deleted.")
+	
+	print("\n(1) Read the notebook \n(2) Add note \n(3) Empty the notebook \n(4) Quit")
+	choice = int(input("Please select one: "))
+
+		
+print("Notebook shutting down, thank you.")

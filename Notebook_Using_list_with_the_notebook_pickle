@@ -1,0 +1,56 @@
+import os
+import pickle
+import time
+
+notebook_name = "notebook.dat"
+if os.path.exists(notebook_name):
+    with open(notebook_name, "rb") as file:
+        notebook = pickle.load(file)
+    print("Notebook loaded.")
+else:
+    notebook = []
+    print("No default notebook was found, created one.")
+
+while True:
+	print("(1) Read the notebook\n(2) Add note\n(3) Edit a note\n(4) Delete a note\n(5) Save and quit\n")
+	choice = input("Please select one: ")
+	
+	if choice == "1":
+		for note in notebook:
+			print(note)
+	
+	elif choice == "2":
+		note = input("Write a new note: ")
+		timestamp = time.strftime("%X %x")
+		notebook.append(note + ":::" + timestamp)
+	
+	elif choice == "3":
+		print("The list has ",len(notebook) ,"notes.")
+		note_choice = int(input("Which of them will be changed?: "))-1
+		print(notebook[note_choice])
+		
+		if note_choice < len(notebook):
+			new_note = input("Give the new note: ")
+			notebook[note_choice] = new_note + ":::" + time.strftime("%X %x")
+		else:
+			print("Incorrect selection.")
+	
+	elif choice == "4":
+		print("The list has ",len(notebook) ,"notes.")
+		note_choice = int(input("Which of them will be deleted?: "))-1
+		
+		if note_choice < len(notebook):
+			print("Deleted note", notebook[note_choice])
+			del notebook[note_choice]
+		else:
+			print("Incorrect selection.")
+	
+	elif choice == "5":
+		with open(notebook_name, "wb") as file:
+			pickle.dump(notebook, file)
+		print("Notebook shutting down, thank you.")
+		break
+	
+	else:
+		print("Incorrect selection.")
+
